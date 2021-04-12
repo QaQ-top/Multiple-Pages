@@ -15,3 +15,6 @@ declare module '*.wasm' {
   const wasm: (options?: WebAssembly.Imports) => Promise<WebAssembly.Memory>;
   export default wasm;
 }
+
+
+declare const GLOBAL_ENV: 'dev' | 'test' | 'prod';

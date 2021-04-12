@@ -4,3 +4,4 @@ import Img from './images/test.png';
 import ImgSvg from './images/test.svg';
 console.log(ImgSvg)
 console.log(Img)
+console.log(GLOBAL_ENV)

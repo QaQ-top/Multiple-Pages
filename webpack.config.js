@@ -19,9 +19,12 @@ module.exports = {
     filename: 'js/[name].[chunkhash].js', // 推荐使用 chunkhash 而不是 hash
     path: path.resolve(__dirname, './dist')
   },
+  // 生成原文件映射, 方便开发
+  devtool: process.env.GLOBAL_ENV === 'prod' ? 'eval' : 'eval-source-map',
+
   // 代码压缩混淆
   optimization: {
-    minimize: true,
+    minimize: process.env.GLOBAL_ENV === 'prod',
     minimizer: [new TerserPlugin({
       terserOptions: DefaultOptions
     })],
