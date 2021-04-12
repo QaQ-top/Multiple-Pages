@@ -27,8 +27,20 @@ module.exports = [
     ]
   },
   {
-    test: /\.(tsx|ts)?$/,
-    loader: 'ts-loader',
+    test: /\.(tsx)?$/,
+    use: [
+      'babel-loader',
+      'ts-loader',
+    ]
+  },
+  {
+    test: /\.(ts)?$/,
+    loader: 'ts-loader'
+  },
+  {
+    test: /\.(js)?$/,
+    loader: 'babel-loader',
+    exclude: '/node_modules/'
   },
   {
     test: /\.(png|jpg|gif|svg)$/i,

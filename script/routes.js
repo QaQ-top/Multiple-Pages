@@ -13,7 +13,7 @@ function getRoutes() {
     new Html({
       template: `./src/pages/index.html`,
       filename: `index.html`,
-      chunks: ['main', 'global'], // 对应 entry 的键， 从而引入 script
+      chunks: ['global', 'main'], // 对应 entry 的键， 从而引入 script
     })
   ];
 
@@ -22,7 +22,7 @@ function getRoutes() {
         template: `./src/pages/${i}/index.html`,
         filename: `${i}/index.html`,
         
-        chunks: [i, 'global'],
+        chunks: ['global', i],
       }));
       entry[i] = `./src/pages/${i}/index`;
   })
