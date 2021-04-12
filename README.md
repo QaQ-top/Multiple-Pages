@@ -13,8 +13,8 @@ webpack 构建多页面应用
 - html-webpack-plugin
 - mini-css-extract-plugin
 
-## 代码压缩
-
+## 代码压缩混淆
+- terser-webpack-plugin
 
 ## Vue组件系统
 - @babel/core, babel-loader
