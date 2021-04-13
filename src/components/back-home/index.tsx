@@ -5,9 +5,12 @@ const Component = defineComponent({
   setup: () => {
     console.log(h)
     return () => <a 
-      href='/' 
-      class="ffff" 
-      {...{title: 'FFFF'}}
+      {
+        ...{
+          class: "back_home",
+          href: '/'
+        }
+      }
     >
       返回首页
     </a>

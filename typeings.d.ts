@@ -16,5 +16,8 @@ declare module '*.wasm' {
   export default wasm;
 }
 
-
 declare const GLOBAL_ENV: 'dev' | 'test' | 'prod';
+
+interface Window {
+  h: any;
+}
